@@ -21,7 +21,10 @@ $(function () {
         timer;
 
     $("#start").click(function () {
-        $("#laoba").attr("src","./老八/老八期待.gif");
+        $("#ganfan").hide();
+        $("#ruizhi").hide();
+        $("#daizi").hide();
+        $("#qidai").show();
         var list = $("#list")
             .val()
             .replace(/ +/g, " ")
@@ -60,7 +63,10 @@ $(function () {
             run = 1;
         } else {
             heading.html(heading.html().replace("吃什么？", "吃这个！"));
-            $("#laoba").attr("src","./老八/老八干饭.gif");
+            $("#ruizhi").hide();
+            $("#daizi").hide();
+            $("#qidai").hide();
+            $("#ganfan").show();
             r = Math.ceil(Math.random() * list.length);
             food = list[r - 1];
             $("#what").html(food);

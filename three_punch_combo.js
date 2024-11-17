@@ -14,7 +14,10 @@ $("#start").click(function () {
 });
 $("#stop").click(function () {
     alert("别吃了，啃袋子去吧！");
-    $("#laoba").attr("src","./老八/老八啃袋子.gif");
+    $("#ganfan").hide();
+    $("#ruizhi").hide();
+    $("#qidai").hide();
+    $("#daizi").show();
     $("#what").html("老八啃的布制购物袋");
     send("啃袋子");
     $(this).hide();
